@@ -11,7 +11,7 @@ end.
 |-|-|-|-|
 |Sequence curation|Metadata export|collection date, location, Pango lineage, AA substitutions|Figure 1a, Figure S1|
 |Tree / ancestral reconstruction|[UShER](https://github.com/yatisht/usher) + [matUtils](https://github.com/yatisht/usher) on the UCSC `public-2025-12-31` dataset (8,433,953 variants)|mutation-annotated tree with recombination nodes|Figure 1c–e, Figure S2|
-|Recombination calling|[RIPPLES](https://github.com/PoonLab/ripples)|per-node recombination breakpoint intervals + `recomb\_parsimony` support|Figure 1b–e, Figure S2|
+|Recombination calling|[RIPPLES](https://github.com/yatisht/usher)|per-node recombination breakpoint intervals + `recomb_parsimony` support|Figure 1b–e, Figure S2|
 |Descendant extraction|[UShER](https://github.com/yatisht/usher) / [matUtils](https://github.com/yatisht/usher) tree traversal|node → descendant strain list with collection dates|Figure 1c–e, Figure S2|
 |Consensus genome|42,911-sequence consensus|reference for the per-site features|Figure 2, Figure S3|
 |RNA secondary structure|[LinearFold](https://github.com/LinearFold/LinearFold)|per-sequence GC, ΔG and dot-bracket structure|Figure 2, Figure S3|
@@ -24,17 +24,16 @@ end.
 
 |Parameter|Value|Where|
 |-|-|-|
-|Recombination confidence filter|`recomb\_parsimony >= 7`|`config.R` → `RECOMB\_PARSIMONY\_MIN`|
-|Breakpoint interval weighting|each interval of length *L* contributes 1/*L* per base|`config.R` → `uniformed\_intensity()`|
-|Intensity track used|`data/reference/recomb\_intensity\_per\_base.csv`, read via `config.R` → `load\_recomb\_intensity()`|`config.R`|
-|Sliding window (features)|100 nt window, 10 nt step|`Figure\_2/scripts/02\_feature\_windows.R`|
-|Cold / hot regions|bottom / top 10% of recombination intensity|`Figure\_2/scripts/03\_plot\_genome\_features.R`, `Figure\_S3/scripts/01\_vcm\_correlation\_matrix.R`|
-|Permutation test|`perm::permTS`, `exact.mc`, N = 5,000, one-sided "greater"|`Figure\_S2/permutation\_hotspots/scripts/01\_permutation\_test.R`|
+|Recombination confidence filter|`recomb_parsimony >= 7`|`config.R` → `RECOMB_PARSIMONY_MIN`|
+|Breakpoint interval weighting|each interval of length *L* contributes 1/*L* per base|`config.R` → `uniformed_intensity()`|
+|Intensity track used|`data/reference/recomb_intensity_per_base.csv`, read via `config.R` → `load_recomb_intensity()`|`config.R`|
+|Sliding window (features)|100 nt window, 10 nt step|`Figure_2/scripts/02_feature_windows.R`|
+|Cold / hot regions|bottom / top 10% of recombination intensity|`Figure_2/scripts/03_plot_genome_features.R`, `Figure_S3/scripts/01_vcm_correlation_matrix.R`|
+|Permutation test|`perm::permTS`, `exact.mc`, N = 5,000, one-sided "greater"|`Figure_S2/permutation_hotspots/scripts/01_permutation_test.R`|
 |Multiple testing|Benjamini-Hochberg (FDR < 0.05)|permutation test, correlation table|
-|Correlation method|Spearman rank, `exact = FALSE`|`Figure\_S3/scripts/01\_vcm\_correlation\_matrix.R`|
-|Cut-off search (supporting)|5–50% in 5% steps, Wilcoxon hot vs. cold|documented in `docs/SCRIPT\_MAPPING.md`|
+|Correlation method|Spearman rank, `exact = FALSE`|`Figure_S3/scripts/01_vcm_correlation_matrix.R`|
 
-## Genome coordinates (Wuhan-Hu-1, NC\_045512.2)
+## Genome coordinates (Wuhan-Hu-1, NC_045512.2)
 
 All coordinates live in `config.R` / `config.py`:
 
@@ -53,11 +52,10 @@ data/raw/         primary inputs the scripts read (recombination events,
                   aggregated variant proportions, node dates)
 data/reference/   annotated inputs (uniformed intensity track, ORF coordinates,
                   variant mappings, 6VXX, Nextstrain tree + metadata)
-data/derived/     per-site / windowed feature tables (SARS2\_Results.xlsx,
+data/derived/     per-site / windowed feature tables (SARS2_Results.xlsx,
                   regenerated intermediates)
 ```
 
 Only files that directly serve Figures 1–2 and Supplementary Figures S2–S3 are
 kept; see [`../data/README.md`](../data/README.md) for the full list and for the
 large primary inputs that are not distributed.
-
