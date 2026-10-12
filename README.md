@@ -2,7 +2,7 @@
 
 ![https://github.com/HuYefan/RecombMapCoV2](https://img.shields.io/badge/code-RecombMapCoV2-blue)
 
-Analysis code for the to-be-published manuscript titled **Recombination drives the emergence and immune escape of SARS-CoV-2 variant NB.1.8.1/XFG** — Figures 1–2 and Supplementary Figures S2–S3.
+Analysis code for the to-be-published manuscript titled **Recombination drives the emergence and immune escape of SARS-CoV-2 variant NB.1.8.1/XFG** as of SARS-CoV-2 sequences on and before 2025-12-31.
 
 **Code repository:** https://github.com/HuYefan/RecombMapCoV2
 
