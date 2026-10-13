@@ -14,7 +14,7 @@ Repository: **https://github.com/HuYefan/RecombMapCoV2** (code `RecombMapCoV2`)
 * **Lineage grouping.** Each Pango lineage is reduced to its prefix (text before
 the first `.`), `(consensus call)` suffixes are stripped, and the prefix is
 mapped to a recombinant group through the `Sublineage` field of
-`RecombVar\_ofInterest.xlsx` / `Variants\_of\_Interest.xlsx` (a value such as
+`RecombVar_ofInterest.xlsx` / `Variants_of_Interest.xlsx` (a value such as
 `XDV|NB` expands to several prefixes). Unmatched lineages become `Others`.
 * **Proportions.** Counts are aggregated per collection date and per location
 (country), and a global `World` aggregate is appended
