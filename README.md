@@ -1,6 +1,6 @@
 # RecombMapCoV2 — SARS-CoV-2 recombinant lineage analysis
 
-![https://github.com/HuYefan/RecombMapCoV2](https://img.shields.io/badge/code-RecombMapCoV2-blue)
+![https://github.com/HuYefan/RecombMapCoV2](https://img.shields.io/badge/code-RecombMapCoV2-blue) ![https://github.com/HuYefan/RecombMapCoV2/blob/main/LICENSE](https://img.shields.io/badge/License-MIT-yellow)
 
 Analysis code for the to-be-published manuscript titled **Recombination drives the emergence and immune escape of SARS-CoV-2 variant NB.1.8.1/XFG** as of SARS-CoV-2 sequences on and before 2025-12-31.
 
@@ -30,7 +30,7 @@ of this repository.
 ## Data
 
 Only inputs that directly produce Figures 1–2 and Supplementary Figures S2–S3
-are kept, under [`data/`](data). Large primary source data are **not** bundled — see
+are kept, under [`data/`](data). Large primary source data are **not** bundled. See
 [`data/README.md`](data/README.md) for the expected names, sizes and sources.
 
 ## Citation
@@ -40,5 +40,5 @@ If you use this code, please cite this manuscript "*Liu, et al.* **Recombination
 
 ## License
 
-Released under the MIT License — see [`LICENSE`](LICENSE).
+Released under the MIT License. See [`LICENSE`](LICENSE).
 
