@@ -1,8 +1,8 @@
-# RecombMapCoV2 — SARS-CoV-2 recombinant lineage analysis
+# RecombMapCoV2: SARS-CoV-2 recombinant lineage analysis
 
 ![https://github.com/HuYefan/RecombMapCoV2](https://img.shields.io/badge/code-RecombMapCoV2-blue) ![https://github.com/HuYefan/RecombMapCoV2/blob/main/LICENSE](https://img.shields.io/badge/License-MIT-yellow)
 
-Analysis code for the to-be-published manuscript titled **Recombination drives the emergence and immune escape of SARS-CoV-2 variant NB.1.8.1/XFG** as of SARS-CoV-2 sequences on and before 2025-12-31.
+Analysis code for the to-be-published manuscript titled **Recombination-driven evolution of SARS-CoV-2 underlies emergence of immune evasive and highly infectious variants** as of SARS-CoV-2 sequences on and before 2025-12-31.
 
 **Code repository:** https://github.com/HuYefan/RecombMapCoV2
 
@@ -35,7 +35,9 @@ are kept, under [`data/`](data). Large primary source data are **not** bundled. 
 
 ## Citation
 
-If you use this code, please cite this manuscript "*Liu, et al.* **Recombination drives the emergence and immune escape of SARS-CoV-2 variant NB.1.8.1/XFG**, 2026" and the upstream tools listed in
+> [!WARNING] **The manuscript has just been accepted. The official citation link will be updated shortly.**
+
+If you use this code, please cite this manuscript "*Liu, et al.* **Recombination-driven evolution of SARS-CoV-2 underlies emergence of immune-evasive and highly infectious variants**, 2026" and the upstream tools listed in
 [`docs/METHODS_AND_TOOLS.md`](docs/METHODS_AND_TOOLS.md).
 
 ## License
